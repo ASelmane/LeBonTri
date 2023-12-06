@@ -17,15 +17,16 @@
             extend: {
               colors: {
                 primary: {
-                    DEFAULT: '#016D77',
-                    '500': '#01454C',
+                    DEFAULT: '#026B5B',
+                    '500': '#014C2C',
                 },
                 secondary: {
-                    DEFAULT: '#84C5BE',
-                    '500': '#52ADA3',
+                    DEFAULT: '#0F8447',
+                    '500': '#084525',
                 },
                 black: '#171717',
                 white: '#F7F7F7',
+                background: "#C6EBD1"
               },
               fontFamily: {
                 'comfortaa': ['Comfortaa', 'sans-serif'],
@@ -39,49 +40,101 @@
     <header class="flex absolute top-0 w-full justify-between px-[80px] py-6 items-center">
         <img src="logo.png" alt="Le Bon tri">
         <nav class="hidden md:flex gap-4 lg:gap-6 items-center">
-            <a href="#" class="text-white text-md font-bold hvr-underline">Votre problème</a>
-            <a href="#" class="text-white text-md font-bold hvr-underline">Notre solution</a>
-            <a href="#" class="text-white text-md font-bold hvr-underline">Nous contacter</a>
+            <a href="#probleme" class="text-black text-md font-bold hvr-underline">Votre problème</a>
+            <a href="#solution" class="text-black text-md font-bold hvr-underline">Notre solution</a>
+            <a href="#" class="text-black text-md font-bold hvr-underline">Nous contacter</a>
             <a href="#" class="text-white text-md font-bold bg-primary px-8 py-4 rounded-full hover:bg-primary-500 transition-linear duration-200">Télécharger</a>
         </nav>
         <div class="flex md:hidden">
-            <span class="absolute top-4 right-10 material-symbols-outlined text-white text-4xl md:hidden z-10 cursor-pointer" @click="open = !open" x-text="open ? 'close' : 'menu'"></span>
+            <span class="absolute top-4 right-10 material-symbols-outlined text-black text-4xl md:hidden z-10 cursor-pointer" @click="open = !open" x-text="open ? 'close' : 'menu'"></span>
             <nav class="flex flex-col justify-center gap-10 items-center absolute top-0 left-0 py-10 w-full h-screen bg-secondary" x-show="open">
-                <a href="#" class="text-white text-xl font-bold hvr-underline">Votre problème</a>
-                <a href="#" class="text-white text-xl font-bold hvr-underline">Notre solution</a>
-                <a href="#" class="text-white text-xl font-bold hvr-underline">Nous contacter</a>
+                <a href="#probleme" class="text-black text-xl font-bold hvr-underline">Votre problème</a>
+                <a href="#solution" class="text-black text-xl font-bold hvr-underline">Notre solution</a>
+                <a href="#" class="text-black text-xl font-bold hvr-underline">Nous contacter</a>
                 <a href="#" class="text-white text-xl font-bold bg-primary px-8 py-4 rounded-full hover:bg-primary-500 transition-linear duration-200">Télécharger</a>
             </nav>
         </div>
     </header>
     <main class="flex flex-col">
-        <section class="flex h-screen items-center justify-between gap-6 bg-gradient-to-b from-secondary-500/80 to-secondary/80 px-[30px] sm:px-[50px] md:px-[80px] pt-10">
+        <section class="flex h-screen items-center justify-between gap-6 px-[30px] sm:px-[50px] md:px-[80px] pt-10">
             <div class="flex flex-col gap-6 w-full md:w-4/6 items-center md:items-start">
-                <h1 class="text-2xl sm:text-4xl text-white font-[100]"><span class="font-bold text-primary">Révolutionnez</span> la gestion des déchets avec LE BON TRI</h1>
-                <h2 class="text-lg sm:text-xl text-white font-normal ">L'Automatisation au Service de l'Environnement!</h2>
+                <h1 class="text-2xl sm:text-4xl text-black"><span class="font-bold text-primary">Révolutionnez</span> la gestion des déchets avec LE BON TRI</h1>
+                <h2 class="text-lg sm:text-xl text-black font-normal ">L'Automatisation au Service de l'Environnement!</h2>
                 <div class="flex gap-6 flex-col sm:flex-row items-center">
                     <a href="#" class="w-fit flex text-white text-md font-bold bg-primary px-8 py-4 rounded-full hover:bg-primary-500 transition-linear duration-200">Découvrir notre solution</a>
                     <a href="#" class="text-white flex w-fit text-md font-bold bg-secondary px-8 py-4 rounded-full hover:bg-secondary-500 transition-linear duration-200">Télécharger</a>
                 </div>
-
             </div>
             <img class="w-[30%] lg:w-2/5 rounded-[10px] hidden md:block" src="images/hero.png" />
         </section>
-        <section class="w-full justify-between items-center inline-flex gap-6 px-[30px] sm:px-[50px] md:px-[80px] pt-24 flex-col-reverse md:flex-row">
+        <section id="probleme" class="w-full justify-between items-center inline-flex gap-6 px-[30px] sm:px-[50px] md:px-[80px] py-32 flex-col-reverse md:flex-row bg-background">
             <div class="flex gap-6 items-center">
-                <div class="h-[320.39px] flex flex-col items-center gap-2">
+                <div class="flex flex-col items-center gap-2">
                     <div class="w-4 h-4 bg-emerald-400 rounded-[105px]"></div>
                     <div class="w-[3px] h-[274px] bg-gradient-to-b from-emerald-400 to-white rounded-[5px]"></div>
                 </div>
                 <div class="flex-col justify-start items-start gap-[46px] inline-flex w-full lg:w-4/5">
                     <div class="flex-col justify-start items-start gap-6 flex">
-                        <div class=" text-primary text-2xl font-bold">Le Défi des Déchets</div>
+                        <div class=" text-primary text-3xl font-bold">Le Défi des Déchets</div>
                         <div class=" text-black text-lg font-normal">Chaque jour, des tonnes de déchets s'accumulent, menaçant notre planète et notre qualité de vie. L'heure est à l'action : une gestion intelligente et automatisée des déchets est plus qu'une nécessité, c'est une responsabilité collective.</div>
                     </div>
                     <a href="#" class="w-fit flex text-white text-md font-bold bg-primary px-8 py-4 rounded-full hover:bg-primary-500 transition-linear duration-200">Découvrir notre solution</a>
                 </div>
             </div>
-            <img class="w-full md:w-2/6" src="https://via.placeholder.com/547x547" />
+            <img class="w-full md:w-2/6 object-cover h-[250px] md:h-full rounded-xl" src="images/trash.png" />
+        </section>
+        <section id="solution" class="w-full justify-between items-center flex gap-6 px-[30px] sm:px-[50px] md:px-[80px] py-24 flex-col">
+            <div class="flex w-full gap-6 items-center justify-center">
+                <div class="w-1/4 h-[3px] bg-gradient-to-l from-primary to-transparent rounded-md"></div>
+                <div class="text-center text-black text-xl md:text-3xl font-bold">Découvrez LE BON TRI</div>
+                <div class="w-1/4 h-[3px] bg-gradient-to-r from-primary to-transparent rounded-md"></div>
+            </div>
+            <p class="w-4/6 text-center pt-2">Votre Allié Intelligent pour une Gestion des Déchets Efficace et Écologique. Notre solution révolutionnaire utilise la dernière technologie en intelligence artificielle pour optimiser la collecte et le traitement des déchets.</p>
+            <div class="relative mt-10">
+                <div class="z-0 relative">
+                    <div class="w-[60vw] h-[60vw] bg-primary/50 rounded-full relative">
+                        <div class="w-[40vw] h-[40vw] bg-secondary rounded-full origin-center absolute z-10 top-[10vw] left-[10vw] flex items-center">
+                            <img src="images/hero.png" alt="phone">
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute top-0 left-[-10vw] w-[503px] h-[129px] p-[30px] bg-white bg-opacity-30 rounded-3xl shadow border border-white backdrop-blur-[25.90px] justify-center items-center gap-2 inline-flex">
+                    <div class="w-[443px] text-neutral-900 text-lg font-normal font-['Comfortaa'] leading-[23.04px]">une gestion intelligente et automatisée des déchets est plus qu'une nécessité, c'est une responsabilité collective.</div>
+                </div>
+                <div class="absolute top-[150px] right-[-10vw] w-[443px] h-[106px] p-[30px] bg-white bg-opacity-30 rounded-3xl shadow border border-white backdrop-blur-[25.90px] justify-center items-center gap-2 inline-flex">
+                    <div class="w-[383px] text-neutral-900 text-lg font-normal font-['Comfortaa'] leading-[23.04px]">Des fonctionnalités personnalisables et des rapports détaillés.</div>
+                </div>
+                <div class="absolute top-[500px] right-[-10vw] w-[417px] h-[129px] p-[30px] bg-white bg-opacity-30 rounded-3xl shadow border border-white backdrop-blur-[25.90px] justify-center items-center gap-2 inline-flex">
+                    <div class="w-[357px] text-neutral-900 text-lg font-normal font-['Comfortaa'] leading-[23.04px]">Un contrôle total et une visibilité sur votre processus de gestion des déchets</div>
+                </div>
+                <div class="absolute top-[650px] left-[-10vw] w-[395px] h-[106px] p-[30px] bg-white bg-opacity-30 rounded-3xl shadow border border-white backdrop-blur-[25.90px] justify-center items-center gap-2 inline-flex">
+                    <div class="w-[335px] text-neutral-900 text-lg font-normal font-['Comfortaa'] leading-[23.04px]">Pour une entreprise plus verte et plus responsable.</div>
+                </div>
+            </div>
+        </section>
+        <section id="solution" class="w-full justify-between items-center flex gap-6 px-[30px] sm:px-[50px] md:px-[80px] py-24 flex-col">
+            <div class="flex w-full gap-6 items-center justify-center">
+                <div class="w-1/4 h-[3px] bg-gradient-to-l from-primary to-transparent rounded-md"></div>
+                <div class="text-center text-black text-xl md:text-3xl font-bold">Trouvez la formule qui vous convient</div>
+                <div class="w-1/4 h-[3px] bg-gradient-to-r from-primary to-transparent rounded-md"></div>
+            </div>
+            <p class="w-4/6 text-center py-6">Options Flexibles pour Toutes les Exigences : Explorez Nos Plans et Trouvez la Solution Parfaite pour Votre Organisation.</p>
+            <div class="w-4/6 relative shadow-2xl rounded-xl" x-data={type:true}>
+                <div class="flex">
+                    <div class="w-2/4 h-[76px] rounded-lg text-center flex items-center justify-center" :class="type ? 'bg-green-200' :''" @click="type = true">Smart Sensor Plan</div>
+                    <div class="w-2/4 h-[76px] bg-white rounded-lg text-center flex items-center justify-center" :class="!type ? 'bg-green-200' :''" @click="type = false">Full Plan</div>
+                </div>
+                <div class="p-10 flex flex-col justify-center items-center">
+                    <h4 class="text-center text-black text-[40px] font-bold" x-text="type ? 'Capteur seul' : 'Benne + Capteur'"></h4>
+                    <p class="text-center p-6" x-show="type">
+                        Optimisez votre gestion des déchets avec notre capteur intelligent. Une solution parfaite pour ceux qui possèdent déjà une benne, apportant une surveillance et un contrôle améliorés.
+                    </p>
+                    <p class="text-center p-6" x-show="!type">
+                        Notre package complet pour une gestion des déchets zéro tracas. Inclut une benne à déchets high-tech et notre capteur intelligent pour une solution de gestion des déchets entièrement intégrée et écologique.
+                    </p>
+                    <a href="#" class="w-fit flex text-white text-md font-bold bg-primary px-8 py-4 rounded-full hover:bg-primary-500 transition-linear duration-200">Demander un devis</a>
+                </div>
+            </div>
         </section>
     </main>
 </body>
