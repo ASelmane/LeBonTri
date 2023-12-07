@@ -126,8 +126,8 @@
             <p class="w-4/6 text-center py-6">Options Flexibles pour Toutes les Exigences : Explorez Nos Plans et Trouvez la Solution Parfaite pour Votre Organisation.</p>
             <div class="w-full md:w-4/6 relative shadow-2xl rounded-xl" x-data={type:true}>
                 <div class="flex">
-                    <div class="w-2/4 h-[76px] border-b-2 rounded-tl-lg text-center flex items-center justify-center cursor-pointer" :class="type ? 'bg-background' :''" @click="type = true">Smart Plan</div>
-                    <div class="w-2/4 h-[76px] border-b-2 rounded-tr-lg text-center flex items-center justify-center cursor-pointer" :class="!type ? 'bg-background' :''" @click="type = false">Full Plan</div>
+                    <div class="w-2/4 h-[76px] border-b rounded-tl-lg text-center flex items-center justify-center cursor-pointer" :class="type ? 'bg-background' :''" @click="type = true">Smart Plan</div>
+                    <div class="w-2/4 h-[76px] border-b rounded-tr-lg text-center flex items-center justify-center cursor-pointer" :class="!type ? 'bg-background' :''" @click="type = false">Full Plan</div>
                 </div>
                 <div class="p-10 flex flex-col justify-center items-center">
                     <h4 class="text-center text-black text-[40px] font-bold" x-text="type ? 'Capteur seul' : 'Benne + Capteur'"></h4>
